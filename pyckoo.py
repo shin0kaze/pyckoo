@@ -20,9 +20,7 @@ def get_time_in_string(hour, min):
     if hour == 12 and min == 0: return "it's noon"
     if hour == 0 and min == 0: return "it's midnight"
     hour_12 = 12 if hour == 12 else hour % 12
-    print(hour_12)
     next_hour_12 = 1 if hour_12 == 12 else hour_12 + 1
-    print(next_hour_12)
     match min:
         case 0:  return "%s o'clock." % (hour_12)
         case 1:  return "1 minute past %s o'clock." % (hour_12)
